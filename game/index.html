@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        canvas {
+            background: red;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body onload="draw()">
+<canvas id="canvas" width="1280" height="728"></canvas>
+<script type="text/javascript">
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+    var x = canvas.width / 2;
+    var y = canvas.height - 30;
+    var dx = 2;
+    var dy = -2;
+    var ballRadius = 20;
+    var paddleHeight = 20;
+    var paddleWidth = 300;
+    var paddleX = (canvas.width - paddleWidth) / 2;
+    var paddleHeight2 = 20;
+    var paddleWidth2 = 300;
+    var paddleX2 = (canvas.width - paddleWidth) / 2;
+    var rightPressed = false;
+    var aPressed = false;
+    var leftPressed = false;
+    var dPressed = false;
+    var p1Score = 0;
+    var p2Score = 0;
+    document.addEventListener("keydown", keyDownHandler, false);
+    document.addEventListener("keyup", keyUpHandler, false);
+    function keyDownHandler(key) {
+        if (key.keyCode == 39) {
+            rightPressed = true;
+        } else if (key.keyCode == 37) {
+            leftPressed = true;
+        }
+        if (key.keyCode == 65) {
+            aPressed = true;
+        } else if (key.keyCode == 68) {
+            dPressed = true;
+        }
+    }
+    function keyUpHandler(key) {
+        if (key.keyCode == 39) {
+            rightPressed = false;
+        } else if (key.keyCode == 37) {
+            leftPressed = false;
+        }
+        if (key.keyCode == 65) {
+            aPressed = false;
+        } else if (key.keyCode == 68) {
+            dPressed = false;
+        }
+    }
+    function reset() {
+        x = canvas.width / 2;
+        y = canvas.height - 30;
+        dx = 2;
+        dy = -2;
+        paddleX = (canvas.width - paddleWidth) / 2;
+        paddleX2 = (canvas.width - paddleWidth) / 2;
+        rightPressed = false;
+        aPressed = false;
+        leftPressed = false;
+        dPressed = false;
+    }
+    function drawScore() {
+        ctx.font = "16px Arial";
+        ctx. fillStyle = "#0095DD";
+        ctx.fillText("P1 Score: " + p1Score, 30, 30);
+        ctx.fillText("P2 Score: " + p2Score, 30, 60);
+    }
+    function drawPaddle() {
+        ctx.beginPath();
+        ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
+        ctx.fillStyle = "#0095DD";
+        ctx.fill();
+        ctx.closePath();
+    }
+    function drawPaddle2() {
+        ctx.beginPath();
+        ctx.rect(paddleX2, 0, paddleWidth2, paddleHeight2);
+        ctx.fillStyle = "#0095DD";
+        ctx.fill();
+        ctx.closePath();
+    }
+    function drawBall() {
+        ctx.beginPath();
+        ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
+        ctx.fillStyle = "#0095DD";
+        ctx.fill();
+        ctx.closePath();
+    }
+    function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        drawBall();
+        drawPaddle();
+        drawPaddle2();
+        drawScore();
+        if (x + dx < ballRadius || x + dx > canvas.width - ballRadius) {
+            dx = -dx;
+        }
+        if (y + dy < ballRadius) {
+            if (x > paddleX2 && x < paddleX2 + paddleWidth2) {
+                if (dy < 0) {
+                    dy = -(dy -= Math.random());
+                } else {
+                    dy = -(dy += Math.random());
+                }
+                if (dx < 0) {
+                    dx -= Math.random();
+                } else {
+                    dx += Math.random();
+                }
+            } else {
+                p1Score++;
+                reset();
+                alert("Player 1 Wins!");
+            }
+        }
+        else if (y + dy > canvas.height - ballRadius) {
+            if (x > paddleX && x < paddleX + paddleWidth) {
+                if (dy < 0) {
+                    dy = -(dy -= Math.random());
+                } else {
+                    dy = -(dy += Math.random());
+                }
+                if (dx < 0) {
+                    dx -= Math.random();
+                } else {
+                    dx += Math.random();
+                }
+            } else {
+                p2Score++;
+                reset();
+                alert("Player 2 Wins!");
+            }
+        }
+        if (rightPressed && paddleX < canvas.width - paddleWidth) {
+            paddleX += 8;
+        } else if (leftPressed && paddleX > 0) {
+            paddleX -= 8;
+        }
+        if (dPressed && paddleX2 < canvas.width - paddleWidth2) {
+            paddleX2 += 8;
+        } else if (aPressed && paddleX2 > 0) {
+            paddleX2 -= 8;
+        }
+        x += dx;
+        y += dy;
+    }
+    setInterval(draw, 10);
+</script>
+</body>
+</html>
