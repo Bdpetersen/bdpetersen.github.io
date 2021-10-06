@@ -1,0 +1,46 @@
+body{
+    background-color: #fca6c9;
+    margin: 0 35%;
+    text-align: center;
+}
+.top_title{
+    color: white
+}
+h1{
+	font-family: Arial;
+}
+#quote_1 {
+    color: white;
+    font-family: Times;
+    font-size: 8;
+}
+
+h2{
+    color: white;
+}
+.quote_2 {
+    color: white;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 8;
+}
+
+img{
+    width: 200px;
+    
+}
+.quote_4 {
+	color: white;
+    font-family: Times;
+    font-size: 19;
+}
+.quote_3 {
+    color: black;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 5;
+    text-align: left;
+}
+.bottom{
+    font-weight: bold;
+}
