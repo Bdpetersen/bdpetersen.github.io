@@ -1,0 +1,23 @@
+body{
+    margin: 0 auto;
+    background-color: #737272;
+}
+.bottom{
+    background-color: #737272;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 50px 0px;
+    padding-left: 170px;
+    margin: 0 auto;
+
+}
+.bottom img{
+    width: 250px;
+    border: 12px solid #454445;
+    border-radius: 250px;
+    
+}
+.top img{
+    width: 100%;
+}
