@@ -47,7 +47,7 @@ nav a:hover{
 }
 .msg{
     background-color: #F5FF90;
-
+    color: #080357;
 }
 footer{
     background-color: #F5FF90;
@@ -67,4 +67,7 @@ footer a{
 }
 footer h3 a:hover{
     text-decoration: underline;
+}
+h4{
+    color: #E7C24F;
 }
