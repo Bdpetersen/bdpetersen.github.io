@@ -174,14 +174,17 @@ nav{
 .rivers-card{
     grid-row: 2/3;
     grid-column: 2/4;
+    padding: 0px;
 }
 .camping-card{
     grid-column: 5/7;
     grid-row: 2/3;
+    padding: 0px;
 }
 .rapids-card{
     grid-row: 2/3;
     grid-column: 8/10;
+    padding: 0px;
 }
 
 @media screen and (max-width: 900px) {
