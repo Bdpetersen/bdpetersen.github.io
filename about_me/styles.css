@@ -8,15 +8,15 @@ body {
 }
 .container {
     max-width: 800px;
-    margin: 2rem auto;
-    padding: 1.5rem;
+    margin: 1rem auto;
+    padding: 1px 1rem .2rem 1rem; /* Added padding for top and bottom */
     background: #ffffff; /* White background for contrast */
     border-radius: 10px;
     color: #333333; /* Dark gray text */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 p {
-    margin: 1rem 0;
+    margin: .5rem 0;
 }
 header {
     background: #00509e; /* Deep blue background */
@@ -27,7 +27,7 @@ header {
 }
 .links{
     text-align: center;
-    padding: 1rem 1rem;
+    padding: .5rem 0;
 }
 .wwr, .pong, .maze, .pick, .w1, .w2{
     font-size: 1rem; /* Same font size for uniformity */
@@ -40,9 +40,6 @@ header {
     display: inline-block;
     text-decoration: none; /* Remove underline for button-like appearance */
     font-weight: bold;
-}
-.wwr:hover {
-    background-color: #0056b3; /* Slightly darker blue on hover */
 }
 header h1 {
     margin: 0;
@@ -60,7 +57,9 @@ a {
 }
 a:hover {
     text-decoration: underline;
-    color: #0056b3; /* Slightly darker blue on hover */
+    color: #fc031ce2; /* Slightly darker blue on hover */
+    background-color: #065b10;
+    text-decoration: none;
 }
 /* Add some spacing for mobile responsiveness */
 @media (max-width: 600px) {
@@ -73,10 +72,10 @@ a:hover {
 }
 footer{
     text-align: center;
-    padding: .6rem 0;
+    padding: 1rem 0;
+    margin: 2rem 0 0 0;
     background: #00509e; /* Deep blue background */
     color: #ffffff; /* White text */
     position: relative;
     bottom: 0;
-    
 }
