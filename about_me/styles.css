@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9; /* Light grayish white background */
+    color: #333333; /* Dark gray text */
+}
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: #ffffff; /* White background for contrast */
+    border-radius: 10px;
+    color: #333333; /* Dark gray text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+p {
+    margin: 1rem 0;
+}
+header {
+    background: #00509e; /* Deep blue background */
+    color: #ffffff; /* White text */
+    padding: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.links{
+    text-align: center;
+    padding: 1rem 1rem;
+}
+.wwr, .pong, .maze, .pick, .w1, .w2{
+    font-size: 1rem; /* Same font size for uniformity */
+    color: #ffffff; /* White text for both buttons */
+    margin-bottom: 1rem;
+    background-color: #00509e; /* Bright blue background for button-like appearance */
+    padding: 0.5rem 1rem; /* Same padding for both buttons */
+    border-radius: 5px; /* Slightly rounded corners for both buttons */
+    text-align: center;
+    display: inline-block;
+    text-decoration: none; /* Remove underline for button-like appearance */
+    font-weight: bold;
+}
+.wwr:hover {
+    background-color: #0056b3; /* Slightly darker blue on hover */
+}
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+h2 {
+    color: #00509e; /* Deep blue for headings */
+    margin-bottom: 1rem;
+    text-align: center;
+}
+a {
+    color: #007bff; /* Bright blue links */
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover {
+    text-decoration: underline;
+    color: #0056b3; /* Slightly darker blue on hover */
+}
+/* Add some spacing for mobile responsiveness */
+@media (max-width: 600px) {
+    .container {
+        padding: 1rem;
+    }
+    header h1 {
+        font-size: 1.5rem;
+    }
+}
+footer{
+    text-align: center;
+    padding: 1rem 0;
+    background: #00509e; /* Deep blue background */
+    color: #ffffff; /* White text */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
