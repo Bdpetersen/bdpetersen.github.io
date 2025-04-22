@@ -21,7 +21,7 @@ p {
 header {
     background: #00509e; /* Deep blue background */
     color: #ffffff; /* White text */
-    padding: 1.5rem 0;
+    padding: 1rem 0;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -73,10 +73,10 @@ a:hover {
 }
 footer{
     text-align: center;
-    padding: 1rem 0;
+    padding: .6rem 0;
     background: #00509e; /* Deep blue background */
     color: #ffffff; /* White text */
     position: relative;
     bottom: 0;
-    width: 100%;
+    
 }
