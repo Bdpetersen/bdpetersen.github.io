@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>View by Scripture</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Select a Scripture</h1>
+    <div class="form-group">
+      <select id="scriptureSelect">
+        <option value="">-- Choose a Scripture --</option>
+      </select>
+    </div>
+
+    <div class="section">
+      <h2>Topics in This Scripture</h2>
+      <p id="topicMessage">Please select a scripture to see related topics.</p>
+      <ul id="topicList"></ul>
+    </div>
+
+    <div class="section">
+      <h2>Talks That Use This Scripture</h2>
+      <p id="talkMessage">Please select a scripture to see related talks.</p>
+      <ul id="talkList"></ul>
+    </div>
+  </div>
+
+  <script>
+    fetch('./scriptures.json')
+      .then(res => res.json())
+      .then(data => {
+        const scriptureSelect = document.getElementById('scriptureSelect');
+        const topicList = document.getElementById('topicList');
+        const talkList = document.getElementById('talkList');
+        const topicMessage = document.getElementById('topicMessage');
+        const talkMessage = document.getElementById('talkMessage');
+
+        data.scriptures.forEach(s => {
+          const option = document.createElement('option');
+          option.value = s.scripture_id;
+          option.textContent = `${s.reference}: ${s.text}`;
+          scriptureSelect.appendChild(option);
+        });
+
+        scriptureSelect.addEventListener('change', () => {
+          const selectedId = parseInt(scriptureSelect.value);
+
+          topicList.innerHTML = '';
+          talkList.innerHTML = '';
+          topicMessage.style.display = 'none';
+          talkMessage.style.display = 'none';
+
+          // Get related topic IDs
+          const topicIds = data.scripture_has_topic
+            .filter(rel => rel.scripture_id === selectedId)
+            .map(rel => rel.topic_id);
+
+          const topics = data.topics.filter(t => topicIds.includes(t.topic_id));
+          topics.forEach(t => {
+            const li = document.createElement('li');
+            li.textContent = t.topic_name;
+            topicList.appendChild(li);
+          });
+
+          // Get related talk IDs
+          const talkIds = data.talk_has_scripture
+            .filter(rel => rel.scripture_id === selectedId)
+            .map(rel => rel.talk_id);
+
+          const talks = data.talks.filter(t => talkIds.includes(t.talk_id));
+          talks.forEach(t => {
+            const li = document.createElement('li');
+            li.textContent = `${t.title} by ${t.speaker}`;
+            talkList.appendChild(li);
+          });
+        });
+      });
+  </script>
+</body>
+</html>
