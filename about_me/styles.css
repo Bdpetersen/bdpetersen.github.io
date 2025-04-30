@@ -29,7 +29,7 @@ header {
     text-align: center;
     padding: .5rem 0;
 }
-.wwr, .pong, .maze, .pick, .w1, .w2{
+.wwr, .pong, .maze, .pick, .w1, .w2, .w3{
     font-size: 1rem; /* Same font size for uniformity */
     color: #ffffff; /* White text for both buttons */
     margin-bottom: 1rem;
