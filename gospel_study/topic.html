@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Scriptures by Topic</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="container">
+      <h1>Select a Topic</h1>
+  
+      <div class="form-group">
+        <select id="topicSelect">
+          <option value="">-- Choose a Topic --</option>
+        </select>
+      </div>
+  
+      <div class="section">
+        <h2>Matching Scriptures</h2>
+        <p id="scriptureMessage">Please select a topic to see related scriptures.</p>
+        <ul id="scriptureList"></ul>
+      </div>
+      
+      <div class="section">
+        <h2>Talks on This Topic</h2>
+        <p id="talkMessage">Please select a topic to see related talks.</p>
+        <ul id="talkList"></ul>
+      </div>
+      </div>
+    </div>
+  </body>
+<script>
+     fetch('./scriptures.json')
+        .then(response => response.json())
+        .then(data => {
+            const topicSelect = document.getElementById('topicSelect');
+            data.topics.forEach(topic => {
+            const option = document.createElement('option');
+            option.value = topic.topic_id;
+            option.textContent = topic.topic_name;
+            topicSelect.appendChild(option);
+            });    
+        
+        topicSelect.addEventListener('change', () =>{
+            // Message elements
+            const scriptureMessage = document.getElementById('scriptureMessage');
+            const talkMessage = document.getElementById('talkMessage');
+
+            // Hide messages when a topic is selected
+            scriptureMessage.style.display = 'none';
+            talkMessage.style.display = 'none';
+            const selectedTopicId = parseInt(topicSelect.value);
+            const relatedScripturesIds = data.scripture_has_topic
+            .filter(rel => rel.topic_id === selectedTopicId)
+            .map(rel => rel.scripture_id);
+            
+            const relatedScriptures = data.scriptures
+            .filter(s => relatedScripturesIds.includes(s.scripture_id));
+            
+            const scriptureList = document.getElementById('scriptureList');
+            scriptureList.innerHTML = '';
+            
+            relatedScriptures.forEach(scripture => {
+                const li = document.createElement('li');
+                li.textContent = `${scripture.reference}: ${scripture.text}`;
+                scriptureList.appendChild(li);
+            });
+            const talkList = document.getElementById('talkList');
+            talkList.innerHTML = '';
+            
+
+            const relatedTalksIds = data.talk_has_topic
+            .filter(rel => rel.topic_id === selectedTopicId)
+            .map(rel => rel.talk_id);
+
+            const relatedTalks = data.talks
+            .filter(t => relatedTalksIds.includes(t.talk_id));
+            relatedTalks.forEach(talk => {
+                const li = document.createElement('li');
+                li.textContent = `${talk.title} by ${talk.speaker}`;
+                talkList.appendChild(li);  
+            });
+        });
+        // If no topic is selected initially
+        document.addEventListener('DOMContentLoaded', () => {
+        const scriptureList = document.getElementById('scriptureList');
+        const talkList = document.getElementById('talkList');
+
+        scriptureList.innerHTML = '';
+        talkList.innerHTML = '';
+        });
+    });
+           
+</script>
+</html>

@@ -1,0 +1,360 @@
+{
+  "scriptures": [
+    {
+      "scripture_id": 1,
+      "text": "Faith is not to have a perfect knowledge of things.",
+      "reference": "Alma 32:21"
+    },
+    {
+      "scripture_id": 2,
+      "text": "Charity is the pure love of Christ.",
+      "reference": "Moroni 7:47"
+    },
+    {
+      "scripture_id": 3,
+      "text": "If ye have faith as a grain of mustard seed, nothing shall be impossible unto you.",
+      "reference": "Matthew 17:20"
+    },
+    {
+      "scripture_id": 4,
+      "text": "For we walk by faith, not by sight.",
+      "reference": "2 Corinthians 5:7"
+    },
+    {
+      "scripture_id": 5,
+      "text": "Faith without works is dead.",
+      "reference": "James 2:26"
+    },
+    {
+      "scripture_id": 6,
+      "text": "By grace are ye saved through faith.",
+      "reference": "Ephesians 2:8"
+    },
+    {
+      "scripture_id": 7,
+      "text": "For we walk by faith, not by sight.",
+      "reference": "2 Corinthians 5:7"
+    },
+    {
+      "scripture_id": 8,
+      "text": "I can do all things through Christ which strengtheneth me.",
+      "reference": "Philippians 4:13"
+    }
+  ],
+  "topics": [
+    {
+      "topic_id": 1,
+      "topic_name": "Faith"
+    },
+    {
+      "topic_id": 2,
+      "topic_name": "Charity"
+    },
+    {
+      "topic_id": 3,
+      "topic_name": "Grace"
+    },
+    {
+      "topic_id": 4,
+      "topic_name": "Works"
+    }
+  ],
+  "talks": [
+    {
+      "talk_id": 1,
+      "title": "Faith in Christ",
+      "speaker": "Jeffrey R. Holland",
+      "date": "2023-04-01",
+      "content": "Faith enables miracles.",
+      "created_at": "2023-04-01 18:00:00"
+    },
+    {
+      "talk_id": 2,
+      "title": "The Power of Charity",
+      "speaker": "Dieter F. Uchtdorf",
+      "date": "2023-10-07",
+      "content": "Charity never fails.",
+      "created_at": "2023-10-07 21:30:00"
+    },
+    {
+      "talk_id": 3,
+      "title": "The Seed of Faith",
+      "speaker": "Henry B. Eyring",
+      "date": "2023-04-02",
+      "content": "Faith begins small like a seed.",
+      "created_at": "2023-04-02 20:00:00"
+    },
+    {
+      "talk_id": 4,
+      "title": "Exercising Faith in Daily Life",
+      "speaker": "Russell M. Nelson",
+      "date": "2023-10-08",
+      "content": "Faith requires action and trust in God.",
+      "created_at": "2023-10-08 16:30:00"
+    },
+    {
+      "talk_id": 5,
+      "title": "Faith and Works",
+      "speaker": "Dallin H. Oaks",
+      "date": "2024-04-06",
+      "content": "Faith and works go hand in hand.",
+      "created_at": "2024-04-06 16:00:00"
+    },
+    {
+      "talk_id": 6,
+      "title": "Grace and Faith",
+      "speaker": "David A. Bednar",
+      "date": "2024-04-07",
+      "content": "Grace complements faith in our spiritual journey.",
+      "created_at": "2024-04-07 20:00:00"
+    },
+    {
+      "talk_id": 7,
+      "title": "The Ministry of Angels",
+      "speaker": "Jeffrey R. Holland",
+      "date": "2010-10-02",
+      "content": "Angels are among us to assist and guide.",
+      "created_at": "2010-10-02 16:00:00"
+    },
+    {
+      "talk_id": 8,
+      "title": "Place No More for the Enemy of My Soul",
+      "speaker": "Jeffrey R. Holland",
+      "date": "2010-04-03",
+      "content": "Eliminate negative influences from your life.",
+      "created_at": "2010-04-03 21:00:00"
+    },
+    {
+      "talk_id": 9,
+      "title": "Like a Broken Vessel",
+      "speaker": "Jeffrey R. Holland",
+      "date": "2013-10-06",
+      "content": "Understanding mental health challenges with compassion.",
+      "created_at": "2013-10-06 20:00:00"
+    },
+    {
+      "talk_id": 10,
+      "title": "Tomorrow the Lord Will Do Wonders Among You",
+      "speaker": "Jeffrey R. Holland",
+      "date": "2016-04-02",
+      "content": "Faith can lead to miracles in our lives.",
+      "created_at": "2016-04-02 17:00:00"
+    }
+  ],
+  "scripture_has_topic": [
+    {
+      "relationship_id": 1,
+      "scripture_id": 1,
+      "topic_id": 1
+    },
+    {
+      "relationship_id": 2,
+      "scripture_id": 2,
+      "topic_id": 2
+    },
+    {
+      "relationship_id": 3,
+      "scripture_id": 3,
+      "topic_id": 1
+    },
+    {
+      "relationship_id": 4,
+      "scripture_id": 4,
+      "topic_id": 1
+    },
+    {
+      "relationship_id": 5,
+      "scripture_id": 5,
+      "topic_id": 1
+    },
+    {
+      "relationship_id": 6,
+      "scripture_id": 5,
+      "topic_id": 4
+    },
+    {
+      "relationship_id": 7,
+      "scripture_id": 6,
+      "topic_id": 1
+    },
+    {
+      "relationship_id": 8,
+      "scripture_id": 6,
+      "topic_id": 3
+    }
+  ],
+  "talk_has_scripture": [
+    {
+      "id": 1,
+      "talk_id": 1,
+      "scripture_id": 1
+    },
+    {
+      "id": 2,
+      "talk_id": 2,
+      "scripture_id": 2
+    },
+    {
+      "id": 3,
+      "talk_id": 3,
+      "scripture_id": 3
+    },
+    {
+      "id": 4,
+      "talk_id": 4,
+      "scripture_id": 4
+    },
+    {
+      "id": 5,
+      "talk_id": 5,
+      "scripture_id": 5
+    },
+    {
+      "id": 6,
+      "talk_id": 6,
+      "scripture_id": 6
+    },
+    {
+      "id": 23,
+      "talk_id": 7,
+      "scripture_id": 3
+    },
+    {
+      "id": 24,
+      "talk_id": 7,
+      "scripture_id": 5
+    },
+    {
+      "id": 25,
+      "talk_id": 8,
+      "scripture_id": 1
+    },
+    {
+      "id": 26,
+      "talk_id": 8,
+      "scripture_id": 6
+    },
+    {
+      "id": 27,
+      "talk_id": 9,
+      "scripture_id": 2
+    },
+    {
+      "id": 28,
+      "talk_id": 9,
+      "scripture_id": 4
+    },
+    {
+      "id": 29,
+      "talk_id": 10,
+      "scripture_id": 7
+    },
+    {
+      "id": 30,
+      "talk_id": 10,
+      "scripture_id": 8
+    },
+    {
+      "id": 31,
+      "talk_id": 3,
+      "scripture_id": 1
+    }
+  ],
+  "talk_has_topic": [
+    {
+      "relationship_id": 1,
+      "talk_id": 1,
+      "topic_id": 1
+    },
+    {
+      "relationship_id": 2,
+      "talk_id": 2,
+      "topic_id": 2
+    },
+    {
+      "relationship_id": 3,
+      "talk_id": 3,
+      "topic_id": 1
+    },
+    {
+      "relationship_id": 4,
+      "talk_id": 4,
+      "topic_id": 1
+    },
+    {
+      "relationship_id": 5,
+      "talk_id": 5,
+      "topic_id": 1
+    },
+    {
+      "relationship_id": 6,
+      "talk_id": 5,
+      "topic_id": 4
+    },
+    {
+      "relationship_id": 7,
+      "talk_id": 6,
+      "topic_id": 1
+    },
+    {
+      "relationship_id": 8,
+      "talk_id": 6,
+      "topic_id": 3
+    },
+    {
+      "relationship_id": 9,
+      "talk_id": 7,
+      "topic_id": 1
+    },
+    {
+      "relationship_id": 10,
+      "talk_id": 8,
+      "topic_id": 4
+    },
+    {
+      "relationship_id": 11,
+      "talk_id": 9,
+      "topic_id": 3
+    },
+    {
+      "relationship_id": 12,
+      "talk_id": 10,
+      "topic_id": 1
+    },
+    {
+      "relationship_id": 13,
+      "talk_id": 7,
+      "topic_id": 2
+    },
+    {
+      "relationship_id": 14,
+      "talk_id": 7,
+      "topic_id": 3
+    },
+    {
+      "relationship_id": 15,
+      "talk_id": 8,
+      "topic_id": 2
+    },
+    {
+      "relationship_id": 16,
+      "talk_id": 9,
+      "topic_id": 1
+    },
+    {
+      "relationship_id": 17,
+      "talk_id": 9,
+      "topic_id": 4
+    },
+    {
+      "relationship_id": 18,
+      "talk_id": 10,
+      "topic_id": 3
+    },
+    {
+      "relationship_id": 19,
+      "talk_id": 10,
+      "topic_id": 2
+    }
+  ]
+}
